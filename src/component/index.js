@@ -58,7 +58,7 @@ export default (props, state) => {
       zIndex={zIndex}
       style={{
         top: 0,
-        transform: `translate(-50%, '+((Math.max(refreshed ? Math.atan(1) : p, 0) * max - 10) - 60)+'px) scale(${refreshed ? p : 1},${refreshed ? p : 1})`,
+        transform: `translate(-50%, ${((Math.max(refreshed ? Math.atan(1) : p, 0) * max - 10) - 60)}px) scale(${refreshed ? p : 1},${refreshed ? p : 1})`,
         backgroundColor: bgColor
       }}
     >
