@@ -30,7 +30,6 @@ const Component = styled.div`
   border-radius: 20px;
   width: 40px;
   height: 40px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 `
 
 const RotatingSvg = styled.svg`
@@ -58,8 +57,8 @@ export default (props, state) => {
       key='pull'
       zIndex={zIndex}
       style={{
-        top: Math.max(refreshed ? Math.atan(1) : p, 0) * max - 10,
-        transform: `translate(-50%, -100%) scale(${refreshed ? p : 1},${refreshed ? p : 1})`,
+        top: 0,
+        transform: `translate(-50%, '+((Math.max(refreshed ? Math.atan(1) : p, 0) * max - 10) - 60)+'px) scale(${refreshed ? p : 1},${refreshed ? p : 1})`,
         backgroundColor: bgColor
       }}
     >
