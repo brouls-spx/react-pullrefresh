@@ -4,6 +4,7 @@
   "description": "react component pull to refresh navigation",
   "main": "index.js",
   "scripts": {
+    "install": "npm run build",
     "prepublishOnly": "npm run build",
     "build": "babel src --out-dir lib",
     "lint:fix": "eslint src --fix"
